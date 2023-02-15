@@ -36,8 +36,8 @@ document.getElementById('decrease-phone-quantity').addEventListener('click', fun
     phonePrice.innerText = netQuantityAndPrice[1].toString() + '.00';
     const details = netPriceDetails(netQuantityAndPrice[1], parseInt(casePrice.innerText));
     subTotalPrice.innerText = details[0].toString() + '.00';
-    totalTax.innerText = details[1].toString();
-    totalPrice.innerText = details[2].toString(); 
+    totalTax.innerText = (details[1].toFixed(2)).toString();
+    totalPrice.innerText = (details[2].toFixed(2)).toString(); 
 });
 
 document.getElementById('increase-phone-quantity').addEventListener('click', function() {
@@ -46,8 +46,8 @@ document.getElementById('increase-phone-quantity').addEventListener('click', fun
     phonePrice.innerText = netQuantityAndPrice[1].toString() + '.00';
     const details = netPriceDetails(netQuantityAndPrice[1], parseInt(casePrice.innerText));
     subTotalPrice.innerText = details[0].toString() + '.00';
-    totalTax.innerText = details[1].toString();
-    totalPrice.innerText = details[2].toString(); 
+    totalTax.innerText = (details[1].toFixed(2)).toString();
+    totalPrice.innerText = (details[2].toFixed(2)).toString(); 
 });
 
 document.getElementById('decrease-case-quantity').addEventListener('click', function() {
@@ -56,8 +56,8 @@ document.getElementById('decrease-case-quantity').addEventListener('click', func
     casePrice.innerText = netQuantityAndPrice[1].toString() + '.00';
     const details = netPriceDetails(parseInt(phonePrice.innerText), netQuantityAndPrice[1]);
     subTotalPrice.innerText = details[0].toString() + '.00';
-    totalTax.innerText = details[1].toString();
-    totalPrice.innerText = details[2].toString(); 
+    totalTax.innerText = (details[1].toFixed(2)).toString();
+    totalPrice.innerText = (details[2].toFixed(2)).toString(); 
 });
 
 document.getElementById('increase-case-quantity').addEventListener('click', function() {
@@ -66,6 +66,6 @@ document.getElementById('increase-case-quantity').addEventListener('click', func
     casePrice.innerText = netQuantityAndPrice[1].toString() + '.00';
     const details = netPriceDetails(parseInt(phonePrice.innerText), netQuantityAndPrice[1]);
     subTotalPrice.innerText = details[0].toString() + '.00';
-    totalTax.innerText = details[1].toString();
-    totalPrice.innerText = details[2].toString();
+    totalTax.innerText = (details[1].toFixed(2)).toString();
+    totalPrice.innerText = (details[2].toFixed(2)).toString(); 
 });
